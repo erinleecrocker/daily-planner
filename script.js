@@ -27,27 +27,27 @@ $(document).ready(function() {
             userEvent: ""
         },{
             value: 4,
-            hour: 1,
+            hour: 13,
             time: "1:00",
             userEvent: ""
         },{
             value: 5,
-            hour: 2,
+            hour: 14,
             time: "2:00",
             userEvent: ""
         },{
             value: 6,
-            hour: 3,
+            hour: 15,
             time: "3:00",
             userEvent: ""
         },{
             value: 7,
-            hour: 4,
+            hour: 16,
             time: "4:00",
             userEvent: ""
         },{
             value: 8,
-            hour: 5,
+            hour: 17,
             time: "5:00",
             userEvent: ""
         }
@@ -59,6 +59,7 @@ $(document).ready(function() {
             var hourEl = $("<p>");
             var userEventEl = $("<textarea>");
             var saveEl = $("<button>");
+            var hourColor = timeBlockInfo[i].hour
             //add content
             timeBlock.addClass("row");
             hourEl.addClass("hour col-sm-1");
@@ -67,6 +68,14 @@ $(document).ready(function() {
             saveEl.attr("data-value", timeBlockInfo[i].value);
             hourEl.text(timeBlockInfo[i].time);
             userEventEl.text(timeBlockInfo[i].userEvent);
+
+            if (hourColor == moment().hour()) {
+                userEventEl.addClass("present")
+            } else if (hourColor < moment().hour()) {
+                userEventEl.addClass("past")
+            } else {
+                userEventEl.addClass("future")
+            }
             // append to existing
             $(".time-block").append(timeBlock);
             timeBlock.append(hourEl);
