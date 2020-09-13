@@ -4,7 +4,7 @@ The goal of this project is to create a simple calendar application that runs in
 
 I used the html, css, javascript (jquery, and moment.js) to accomplish this project.
 
-When i started this project, I first put all my elements in the HTML document, however this created a problem. While still possible I would have many repeating elements in my code so I looked for a cleaner option.  I decided to make an object that contained all the information for my time blocks. I used a for loop to itterate through this object to create elements, add their context, and append them to the container in my html document.
+When i started this project, I first put all my elements in the HTML document, however this created a problem. While still possible I would have many repeating elements in my code so I looked for a cleaner option.  I decided to make an array of objects that contained all the information for my time blocks. I used a for loop to itterate through this array to create elements, add their context, and append them to the container in my html document.
 
 <img width="590" alt="Screen Shot 2020-09-12 at 11 19 51 PM" src="https://user-images.githubusercontent.com/69767328/93009631-4a8afc00-f551-11ea-83a1-c4b1102bbcd5.png">
 
@@ -14,7 +14,7 @@ after this all I needed was a way to identify which buttons were being clicked w
 
 <img width="581" alt="Screen Shot 2020-09-12 at 11 20 18 PM" src="https://user-images.githubusercontent.com/69767328/93009646-7efeb800-f551-11ea-953f-200fe423a518.png">
 
-From there I used JSON.stringify to store my object in the browser, and JSON.parse to return it to an object and use it to update the information being displayed. 
+From there I used JSON.stringify to store the array of objects in the browser, and JSON.parse to return it to the array to object form and use it to update the information being displayed. 
 
 The color coded times are based on military time so i was able to use the current time (given by moment.js) and create an if then statment for = to current time < current time or > current time. 
 
