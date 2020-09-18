@@ -21,3 +21,5 @@ From there I used JSON.stringify to store the array of objects in the browser, a
 The color coded times are based on military time so i was able to use the current time (given by moment.js) and create an if then statment for = to current time < current time or > current time. 
 
 oh and of corse the current time used at the top was formated from moment.js documentation to show the day of the week, month, day of the month, and year.
+
+to view the deployed application visit : https://erinleecrocker.github.io/daily-planner/
