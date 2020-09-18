@@ -1,5 +1,7 @@
 # daily-planner
 
+![Screen Shot 2020-09-18 at 11 09 22 AM](https://user-images.githubusercontent.com/69767328/93613902-7538e280-f99f-11ea-8571-dcb0fc487ca6.png)
+
 The goal of this project is to create a simple calendar application that runs in the browser, and allows the user to save events for each hour of the work day. When the planner is opened the current date can be viewed at the top of the calandar and below are timeblocks for the 9-5 standard buisness hours. Each timeblock is color-coded according to past, present, and future hours.  The user is able to input text for that event and when they click save,  it is saved in the local storage so their entry will persist even when the page is refreshed
 
 I used the html, css, javascript (jquery, and moment.js) to accomplish this project.
